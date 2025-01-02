@@ -26,3 +26,18 @@ function runAfter1s(fn) {
 runAfter1s(function () {
     console.log("HELLO");
 });
+// creating function
+function IsLegal(user) {
+    if (user.age > 18) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+// Calling function while passing arguments to an object (i.e Interface)
+IsLegal({
+    firstname: "Aniket",
+    lastname: "Chavan",
+    age: 20
+});

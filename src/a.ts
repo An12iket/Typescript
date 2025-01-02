@@ -29,3 +29,25 @@ function runAfter1s(fn: () => void){
 runAfter1s(function () {
     console.log("HELLO");
 })
+
+// Interface in TS
+// Defining Interface
+interface User{
+    firstname: string,
+    lastname: string,
+    age: number
+}
+// creating function
+function IsLegal(user: User){
+    if(user.age > 18){
+        return true
+    } else {
+        return false
+    }
+}
+// Calling function while passing arguments to an object (i.e Interface)
+IsLegal({
+    firstname: "Aniket",
+    lastname: "Chavan",
+    age: 20
+})

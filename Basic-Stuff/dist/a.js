@@ -56,3 +56,17 @@ function doSomething(keyPressed) {
 }
 doSomething(Direction.down);
 console.log(Direction.up);
+// Common useCase in express
+const app = express();
+var ResponseStatus;
+(function (ResponseStatus) {
+    ResponseStatus[ResponseStatus["Success"] = 200] = "Success";
+    ResponseStatus[ResponseStatus["NotFound"] = 404] = "NotFound";
+    ResponseStatus[ResponseStatus["Error"] = 500] = "Error";
+})(ResponseStatus || (ResponseStatus = {}));
+app.get("/', (req, res) => {);
+if (!req.query.userId) {
+    res.status(ResponseStatus.Error).json({});
+}
+// and so on...
+res.status(ResponseStatus.Success).json({});

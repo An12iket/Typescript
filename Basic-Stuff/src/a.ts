@@ -51,3 +51,18 @@ IsLegal({
     lastname: "Chavan",
     age: 20
 })
+
+// Enums in TS
+enum Direction {
+    up,
+    down,
+    left,
+    right
+}
+function doSomething(keyPressed: Direction){
+    if(keyPressed === Direction.up){
+        // do something
+    }
+}
+doSomething(Direction.down);
+console.log(Direction.up);
